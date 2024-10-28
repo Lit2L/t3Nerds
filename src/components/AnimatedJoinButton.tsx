@@ -13,14 +13,14 @@ export function AnimatedJoinButton() {
         )}
       >
         <AnimatedShinyText className='inline-flex items-center justify-center transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400'>
-          <span className='mr-1 scale-75 scale-x-[-.7] transition-transform ease-in-out group-hover:translate-x-2 sm:scale-x-[-1]'>
+          <span className='mr-3 scale-75 scale-x-[-.7] transition-transform ease-in-out group-hover:translate-x-3 sm:scale-x-[-1]'>
             🥊
           </span>
           <span className='font-heading text-[9px] capitalize md:text-xs'>
             Start Training
           </span>
 
-          <span className='ml-1 scale-75 transition-transform ease-in-out group-hover:-translate-x-2'>
+          <span className='ml-3 scale-75 transition-transform ease-in-out group-hover:-translate-x-3'>
             🥊
           </span>
         </AnimatedShinyText>

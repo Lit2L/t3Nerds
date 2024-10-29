@@ -8,7 +8,7 @@ export const Benefits = () => {
     {
       title: 'Calorie Burner',
       icon: <GiStrong />,
-      description: `It's all about burning those extra calories and Muay Thai 90does it exceptional job at it. Each Muay Thai session lasts about 1-2 hours and consists of warm-up, shadow boxing, drilling techniques, heavy bag work, padwork, with some strength & conditioning exercises. One 2-hour session can burn 1500 calories, making it an effectives and fun way to lose weight.`
+      description: `It's all about burning those extra calories and Muay Thai does a great job at it. Each Muay Thai session lasts about 1-2 hours and consists of warm-up, shadow boxing, drilling techniques, heavy bag work, padwork, with some strength & conditioning exercises. One 2-hour session can burn 1500 calories, making it an effectives and fun way to lose weight.`
     },
     {
       title: 'Self-Defense',

@@ -28,7 +28,7 @@ export function MainNav({ items, children }: MainNavProps) {
         className='hidden h-20 w-28 items-center md:flex md:flex-col'
       >
         <Logo />
-        <span className='font-genos hidden text-xs font-bold sm:inline-block'>
+        <span className='hidden font-genos text-xs font-bold sm:inline-block'>
           {siteConfig.name}
         </span>
       </Link>

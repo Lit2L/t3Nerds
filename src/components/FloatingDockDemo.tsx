@@ -33,7 +33,7 @@ export function FloatingDockDemo() {
       href: '/#training'
     },
     {
-      title: 'Pricing',
+      title: 'Members',
       icon: (
         <HiOutlineWallet className='h-full w-full text-neutral-500 dark:text-neutral-300' />
       ),

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { marketingConfig } from '@/config/marketing'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
+import { ModeToggle } from '@/components/ui/mode-toggle'
 import { FloatingDockDemo } from '@/components/FloatingDockDemo'
 import { MainNav } from '@/components/main-nav'
 import { SiteFooter } from '@/components/site-footer'
@@ -19,7 +20,8 @@ export default async function MarketingLayout({
       <header className='container z-40 bg-background bg-gradient-to-bl from-emerald-500/90 via-emerald-400/70 to-emerald-600/95'>
         <div className='flex h-20 items-center justify-between py-6'>
           <MainNav items={marketingConfig.mainNav} />
-          <nav>
+          <nav className='flex items-center gap-3'>
+            <ModeToggle />
             <Link
               href='/login'
               className={cn(

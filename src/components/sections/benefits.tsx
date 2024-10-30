@@ -66,11 +66,11 @@ export const Benefits = () => {
             className='relative overflow-hidden rounded-lg border bg-background p-2'
           >
             <div className='flex flex-col justify-center gap-3 rounded-md px-3 py-2'>
-              <div className='flex items-center justify-between px-3'>
-                <h3 className='font-bold'>{benefit.title}</h3>
+              <div className='flex items-center gap-3 px-3'>
                 <span className='flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xl text-black'>
                   {benefit.icon}
                 </span>
+                <h3 className='font-bold'>{benefit.title}</h3>
               </div>
               <p className='text-sm text-muted-foreground'>
                 {benefit.description}

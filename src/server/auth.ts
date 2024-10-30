@@ -1,13 +1,13 @@
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import {
   getServerSession,
   type DefaultSession,
-  type NextAuthOptions,
-} from "next-auth"
-import DiscordProvider from "next-auth/providers/discord"
+  type NextAuthOptions
+} from 'next-auth'
+import DiscordProvider from 'next-auth/providers/discord'
 
-import { env } from "@/env.js"
-import { db } from "@/lib/db"
+import { env } from '@/env.js'
+import { db } from '@/lib/db'
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -15,18 +15,18 @@ import { db } from "@/lib/db"
  *
  * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
  */
-declare module "next-auth" {
+declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: {
       id: string
       // ...other properties
       // role: UserRole;
-    } & DefaultSession["user"]
+    } & DefaultSession['user']
   }
 
   // interface User {
   //   // ...other properties
-  //   // role: UserRole;
+  // role: UserRole;
   // }
 }
 
@@ -38,16 +38,16 @@ declare module "next-auth" {
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
   session: {
-    strategy: "jwt",
+    strategy: 'jwt'
   },
   pages: {
-    signIn: "/login",
+    signIn: '/login'
   },
   providers: [
     DiscordProvider({
       clientId: env.DISCORD_CLIENT_ID,
-      clientSecret: env.DISCORD_CLIENT_SECRET,
-    }),
+      clientSecret: env.DISCORD_CLIENT_SECRET
+    })
     /**
      * ...add more providers here.
      *
@@ -72,8 +72,8 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       const dbUser = await db.user.findFirst({
         where: {
-          email: token.email,
-        },
+          email: token.email
+        }
       })
 
       if (!dbUser) {
@@ -87,10 +87,10 @@ export const authOptions: NextAuthOptions = {
         id: dbUser.id,
         name: dbUser.name,
         email: dbUser.email,
-        picture: dbUser.image,
+        picture: dbUser.image
       }
-    },
-  },
+    }
+  }
 }
 
 /**

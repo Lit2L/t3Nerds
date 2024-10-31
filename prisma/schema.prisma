@@ -7,17 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        String   @id @default(cuid())
-  title     String
-  content   Json?
-  published Boolean  @default(false)
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @map("updated_at")
-  authorId  String
-  author    User     @relation(fields: [authorId], references: [id])
-}
-
 model Account {
   id                String   @id @default(cuid())
   userId            String
@@ -36,6 +25,8 @@ model Account {
   user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
+  @@map("accounts")
 }
 
 model Session {
@@ -57,38 +48,26 @@ model User {
   image                  String?
   createdAt              DateTime  @default(now()) @map("created_at")
   updatedAt              DateTime  @default(now()) @map("updated_at")
-  stripeCustomerId       String?
-  stripeSubscriptionId   String?
-  stripePriceId          String?
-  stripeCurrentPeriodEnd DateTime?
+  stripeCustomerId       String?   @unique @map("stripe_customer_id")
+  stripeSubscriptionId   String?   @unique @map("stripe_subscription_id")
+  stripePriceId          String?   @map("stripe_price_id")
+  stripeCurrentPeriodEnd DateTime? @map("stripe_current_period_end")
+  Post                   Post[]
   accounts               Account[]
-  Order                  Order[]
-  posts                  Post[]
   sessions               Session[]
 
   @@map("users")
 }
 
-model Order {
-  id              String    @id @default(cuid())
-  userId          String
-  amount          Float
-  currency        String
-  status          String
-  createdDate     DateTime  @default(now())
-  paymentIntentID String?   @unique
-  user            User      @relation(fields: [userId], references: [id])
-  products        Product[] @relation("OrderToProduct")
-}
-
-model Product {
-  id          String  @id @default(cuid())
-  name        String
-  description String?
-  unit_amount Float
-  image       String?
-  quantity    Float   @default(0)
-  orders      Order[] @relation("OrderToProduct")
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   Json?
+  published Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @map("updated_at")
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
 }
 
 model VerificationToken {
@@ -97,4 +76,10 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+enum UserRole {
+  ADMIN
+  USER
 }

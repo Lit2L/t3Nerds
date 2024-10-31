@@ -115,7 +115,7 @@ export const Training = () => {
       id='training'
       className='container mx-auto bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] pb-24 font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
     >
-      <div className='grid items-center justify-center gap-3  sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3'>
+      <div className='grid items-center justify-center justify-center gap-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3'>
         {trainingCards.map((card) => (
           <TrainingCard key={card.id} card={card} />
         ))}

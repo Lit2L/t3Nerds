@@ -59,7 +59,7 @@ export function Editor({ post }: EditorProps) {
 
     const Header = (await import('@editorjs/header')).default
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-
+    // @ts-expect-error import
     const Embed = (await import('@editorjs/embed')).default
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 
@@ -71,7 +71,7 @@ export function Editor({ post }: EditorProps) {
 
     const Code = (await import('@editorjs/code')).default
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-
+    // @ts-expect-error import
     const LinkTool = (await import('@editorjs/link')).default
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 

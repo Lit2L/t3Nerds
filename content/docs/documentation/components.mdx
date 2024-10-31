@@ -62,12 +62,12 @@ You can also use HTML to embed cards in a grid.
 ```mdx
 <div className="grid grid-cols-2 gap-4">
   <Card href="#">
-    #### Card One 
+    #### Card One
     You can use **markdown** inside cards.
   </Card>
 
   <Card href="#">
-    #### Card Two 
+    #### Card Two
     You can also use `inline code` and code blocks.
   </Card>
 </div>
@@ -75,12 +75,12 @@ You can also use HTML to embed cards in a grid.
 
 <div className="grid grid-cols-2 gap-4">
   <Card href="#">
-    #### Card One 
+    #### Card One
     You can use **markdown** inside cards.
   </Card>
 
   <Card href="#">
-    #### Card Two 
+    #### Card Two
     You can also use `inline code` and code blocks.
   </Card>
 </div>
@@ -114,7 +114,7 @@ export function Mdx({ code }) {
 Once you've added your custom component, you can use it in MDX as follows:
 
 ```js
-<CustomComponent propName="value" />
+<CustomComponent propName='value' />
 ```
 
 ---
@@ -140,7 +140,7 @@ This will overwrite the `<hr />` tag or `---` in Mardown with the HTML output ab
 Tailwind CSS classes can be used inside MDX for styling.
 
 ```mdx
-<p className="text-red-600">This text will be red.</p>
+<p className='text-red-600'>This text will be red.</p>
 ```
 
 Make sure you have configured the path to your content in your `tailwind.config.js` file:
@@ -149,9 +149,9 @@ Make sure you have configured the path to your content in your `tailwind.config.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./content/**/*.{md,mdx}",
-  ],
+    './app/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './content/**/*.{md,mdx}'
+  ]
 }
 ```

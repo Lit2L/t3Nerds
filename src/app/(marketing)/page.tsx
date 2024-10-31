@@ -7,7 +7,7 @@ export default async function IndexPage() {
   const stars = false
 
   return (
-    <div className='min-h-screen '>
+    <div className='mx-auto min-h-screen w-full'>
       <HeroLanding />
       <Training />
       <Benefits />

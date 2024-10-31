@@ -12,7 +12,7 @@ dependencies:
     specifier: ^2.26.5
     version: 2.30.6
   '@editorjs/embed':
-    specifier: ^2.7.6
+    specifier: ^2.5.3
     version: 2.7.6
   '@editorjs/header':
     specifier: ^2.7.0
@@ -248,9 +248,6 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.14)
-  unist:
-    specifier: ^0.0.1
-    version: 0.0.1
   zod:
     specifier: ^3.22.4
     version: 3.23.8
@@ -283,9 +280,6 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18.2.15
     version: 18.3.1
-  '@types/unist':
-    specifier: ^3.0.3
-    version: 3.0.3
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.11.0
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.1)(typescript@5.6.3)
@@ -356,8 +350,8 @@ devDependencies:
     specifier: ^5.1.6
     version: 5.6.3
   unist-util-visit:
-    specifier: ^4.1.2
-    version: 4.1.2
+    specifier: ^5.0.0
+    version: 5.0.0
 
 packages:
 
@@ -9399,6 +9393,12 @@ packages:
     dependencies:
       '@types/unist': 2.0.11
 
+  /unist-util-is@6.0.0:
+    resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==}
+    dependencies:
+      '@types/unist': 3.0.3
+    dev: true
+
   /unist-util-position-from-estree@1.1.2:
     resolution: {integrity: sha512-poZa0eXpS+/XpoQwGwl79UUdea4ol2ZuCYguVaJS4qzIOMDzbqz8a3erUCOmubSZkaOuGamb3tX790iwOIROww==}
     dependencies:
@@ -9428,6 +9428,13 @@ packages:
       '@types/unist': 2.0.11
       unist-util-is: 5.2.1
 
+  /unist-util-visit-parents@6.0.1:
+    resolution: {integrity: sha512-L/PqWzfTP9lzzEa6CKs0k2nARxTdZduw3zyh8d2NVBnsyvHjSX4TWse388YrrQKbvI8w20fGjGlhgT96WwKykw==}
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+    dev: true
+
   /unist-util-visit@4.1.2:
     resolution: {integrity: sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==}
     dependencies:
@@ -9435,10 +9442,13 @@ packages:
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
 
-  /unist@0.0.1:
-    resolution: {integrity: sha512-bnzuF8b6d47WubA4a5yLqFbuZz/v/NS6eRwUIdOaDmsqzwTlyv8yS1g3M7ISdtBQrigPD3qKK87Cu7zhEfCF3A==}
-    deprecated: Use @types/unist instead
-    dev: false
+  /unist-util-visit@5.0.0:
+    resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+      unist-util-visit-parents: 6.0.1
+    dev: true
 
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}

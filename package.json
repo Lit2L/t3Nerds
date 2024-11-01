@@ -19,6 +19,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@contentlayer/cli": "^0.3.4",
+    "@contentlayer/core": "^0.3.4",
     "@editorjs/code": "^2.8.0",
     "@editorjs/editorjs": "^2.26.5",
     "@editorjs/embed": "^2.5.3",

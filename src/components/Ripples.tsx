@@ -9,7 +9,6 @@ export function RippleDemo() {
         src='/mtfight.jpeg'
         alt='Martial Arts Training'
         fill
-        objectPosition='center'
         className='rounded-full opacity-20'
       />
       <Ripple />

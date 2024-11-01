@@ -16,17 +16,14 @@ import { cn } from '@/lib/utils'
 
 export const FloatingDock = ({
   items,
-  desktopClassName,
-  mobileClassName
+  desktopClassName
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[]
   desktopClassName?: string
-  mobileClassName?: string
 }) => {
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      {/* <FloatingDockMobile items={items} className={mobileClassName} /> */}
     </>
   )
 }
@@ -99,7 +96,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        'mx-auto hidden h-16 items-end gap-4 rounded-2xl  bg-gray-50 px-4 pb-3 dark:bg-neutral-900 md:flex',
+        'mx-auto  flex h-16 items-end gap-4  rounded-2xl bg-gray-50 px-4 pb-3 dark:bg-neutral-900',
         className
       )}
     >

@@ -1,6 +1,6 @@
-import { createTRPCRouter, protectedProcedure } from "@/server/api/trpc"
+import { createTRPCRouter, protectedProcedure } from '@/server/api/trpc'
 
-import { userNameSchema } from "@/lib/validations/user"
+import { userNameSchema } from '@/lib/validations/user'
 
 export const userRouter = createTRPCRouter({
   updateName: protectedProcedure
@@ -8,11 +8,11 @@ export const userRouter = createTRPCRouter({
     .mutation(async ({ ctx, input }) => {
       return ctx.db.user.update({
         where: {
-          id: ctx.session.user.id,
+          id: ctx.session.user.id
         },
         data: {
-          name: input.name,
-        },
+          name: input.name
+        }
       })
-    }),
+    })
 })

@@ -30,7 +30,7 @@ const TrainingCard = ({ card }: TrainingCardProps) => (
         <Image
           src={card.image}
           alt={card.title}
-          className='rounded-lg object-cover'
+          className='rounded-lg '
           // width={300}
           // height={300}
           fill

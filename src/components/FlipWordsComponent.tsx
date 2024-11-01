@@ -13,13 +13,11 @@ export function FlipWordsComponent() {
   ]
 
   return (
-    <div className='flex w-full flex-col items-center justify-center gap-6 px-4'>
-      <div className='mx-auto flex w-96 items-center justify-center'>
-        <p className='text-md text-center font-heading font-semibold text-emerald-600 dark:text-emerald-500'>
-          +++
-        </p>
-        <FlipWords words={words} />
-      </div>
+    <div className='flex w-full justify-center'>
+      <p className='text-md text-center font-genos font-semibold text-emerald-600 dark:text-emerald-400'>
+        +++
+      </p>
+      <FlipWords words={words} />
     </div>
   )
 }

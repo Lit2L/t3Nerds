@@ -15,6 +15,8 @@ import { RiCalendarScheduleLine } from 'react-icons/ri'
 
 import { FloatingDock } from '@/components/ui/floating-dock'
 
+import { ModeToggle } from './ui/mode-toggle'
+
 export function FloatingDockDemo() {
   const links = [
     {
@@ -22,7 +24,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconHome className='h-full w-full text-neutral-500 dark:text-neutral-300' />
       ),
-      href: '#'
+      href: '/#'
     },
 
     {
@@ -46,13 +48,17 @@ export function FloatingDockDemo() {
       ),
       href: '/#schedule'
     },
-
     {
       title: 'Bookings',
       icon: (
         <BsCalendar2Plus className='h-full w-full text-neutral-500 dark:text-neutral-300' />
       ),
       href: 'https://calendly.com/spiderbear714/private-with-coach-larry'
+    },
+    {
+      title: 'Dark Mode',
+      icon: <ModeToggle />,
+      href: '#'
     }
   ]
   return (

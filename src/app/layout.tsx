@@ -33,6 +33,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nerdsfighting.com'),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: 'shadcn',
+      name: 'larry||_',
       url: 'https://nerdsfighting.com'
     }
   ],
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: '@shadcn'
+    creator: '@larry||_'
   },
   icons: {
     icon: '/favicon.ico',

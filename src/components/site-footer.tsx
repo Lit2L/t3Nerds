@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
+import { ModeToggle } from '@/components/ui/mode-toggle'
 import { Icons } from '@/components/icons'
-import { ModeToggle } from '@/components/mode-toggle'
 
 import Logo from './Logo'
 

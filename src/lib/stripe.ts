@@ -1,8 +1,8 @@
-import Stripe from "stripe"
+import Stripe from 'stripe'
 
-import { env } from "@/env.js"
+//import { env } from '@/process.env.js'
 
-export const stripe = new Stripe(env.STRIPE_API_KEY, {
-  apiVersion: "2022-11-15",
-  typescript: true,
+export const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
+  apiVersion: '2022-11-15',
+  typescript: true
 })

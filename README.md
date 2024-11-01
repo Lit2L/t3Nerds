@@ -21,10 +21,10 @@ This project is based on the [T3 Stack](https://create.t3.gg/) and bootstrapped 
 
 3. **Configuration:**
 
-   Copy the `.env.example` file to `.env.local` and update the variables as needed:
+   Copy the `.process.env.example` file to `.process.env.local` and update the variables as needed:
 
    ```bash
-   cp .env.example .env.local
+   cp .process.env.example .process.env.local
    ```
 
 4. **Run the Development Server:**

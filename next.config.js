@@ -4,7 +4,7 @@
  */
 import { withContentlayer } from 'next-contentlayer'
 
-await import('./src/env.js')
+// await import('./src/process.env.js')
 
 /** @type {import("next").NextConfig} */
 const config = {

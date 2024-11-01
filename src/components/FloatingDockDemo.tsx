@@ -46,16 +46,9 @@ export function FloatingDockDemo() {
       ),
       href: '/#schedule'
     },
-    // {
-    //   title: 'Schedule',
-    //   icon: (
-    //     <IconExchange className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    //   ),
-    //   href: '/#schedule'
-    // },
 
     {
-      title: 'Book Private',
+      title: 'Bookings',
       icon: (
         <BsCalendar2Plus className='h-full w-full text-neutral-500 dark:text-neutral-300' />
       ),

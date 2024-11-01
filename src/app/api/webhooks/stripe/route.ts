@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import type Stripe from 'stripe'
 
-import { env } from '@/env.js'
+//import { env } from '@/process.env.js'
 import { db } from '@/lib/db'
 import { stripe } from '@/lib/stripe'
 
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      env.STRIPE_WEBHOOK_SECRET
+      process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (error) {
     // @ts-expect-error error has message

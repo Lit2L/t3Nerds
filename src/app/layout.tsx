@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'shadcn',
-      url: 'https://shadcn.com'
+      url: 'https://nerdsfighting.com'
     }
   ],
   creator: 'shadcn',

@@ -19,9 +19,11 @@ interface TrainingCardProps {
 }
 
 const TrainingCard = ({ card }: TrainingCardProps) => (
-  <article className='min-w-[300px] max-w-[400px] rounded-lg bg-gray-100 p-3 shadow-lg transition-transform duration-200 hover:scale-105 dark:bg-gray-800'>
+  <article className='m-1 mx-auto h-[36rem] min-w-[200px] max-w-[300px] rounded-lg border-4 border-black bg-gray-100 p-3 shadow-lg transition-transform duration-200 hover:scale-105 dark:bg-gray-800'>
     <div className='flex w-full flex-col items-center justify-center gap-2 border-4 text-lg font-semibold'>
-      <div>{card.icon}</div>
+      <div className='rounded-full border-2 border-black/50 p-3'>
+        {card.icon}
+      </div>
       <h3>{card.title}</h3>
 
       <AspectRatio ratio={1 / 1} className=''>
@@ -36,7 +38,7 @@ const TrainingCard = ({ card }: TrainingCardProps) => (
         />
       </AspectRatio>
 
-      <div className='p-3 text-center md:text-left'>
+      <div className='p-2 text-center md:text-left'>
         <p className='text-sm text-gray-700 dark:text-gray-300'>
           {card.description}
         </p>

@@ -16,19 +16,20 @@ export default function HeroLanding() {
       id='hero'
       className='container relative mx-auto flex w-full flex-col items-center space-y-9 py-24 text-center sm:max-w-3xl md:h-screen md:max-w-4xl md:space-y-16 lg:max-w-5xl xl:max-w-7xl '
     >
-      <Badge className='md:text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-heading text-[9px] uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide md:text-xs'>
+      <Badge className='md:text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-genos text-[9px] font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide md:text-xs lg:text-lg'>
         Kickboxing & Martial Arts Training Center
       </Badge>
       <GradualSpacing
-        className='font-logo text-center font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
+        className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
         text='Nerds Fighting'
       />
       <RippleDemo />
       <div className='h-32 w-48 sm:h-60 sm:w-72'>
         <Logo />
 
-        <div className='md:text-md mx-auto w-full text-center font-heading text-xs tracking-tight text-white'>
-          Training <span className='text-xs text-red-500'> Center</span>
+        <div className='md:text-md text-md mx-auto w-full text-center font-genos font-bold tracking-tight text-white'>
+          Training{' '}
+          <span className='text-md font-bold text-red-500'> Center</span>
         </div>
       </div>
 

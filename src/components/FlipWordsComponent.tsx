@@ -4,6 +4,8 @@ import { FlipWords } from '@/components/ui/flip-words'
 
 export function FlipWordsComponent() {
   const words = [
+    'No-Meatheads',
+    'No-Egos',
     'Technique',
     'Strength',
     'Conditioning',

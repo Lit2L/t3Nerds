@@ -17,7 +17,7 @@ export default function HeroLanding() {
       className='container relative mx-auto flex min-h-screen w-full flex-col items-center justify-evenly pb-36   text-center sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
     >
       <Badge className='-translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-genos  font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
-        Kickboxing & Martial Arts Training Center
+        Kickboxing & Martial Arts Training Club
       </Badge>
       <GradualSpacing
         className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
@@ -27,9 +27,12 @@ export default function HeroLanding() {
       <div className='h-32 w-48 sm:h-60 sm:w-72'>
         <Logo />
 
-        <div className='md:text-md text-md mx-auto w-full text-center font-genos font-bold tracking-tight text-white'>
-          Training{' '}
-          <span className='text-md font-bold text-red-500'> Center</span>
+        <div className='text-md mx-auto w-full text-center font-genos font-bold tracking-tight tracking-widest text-white'>
+          TRAINING{' '}
+          <span className='text-md font-bold tracking-widest text-red-500'>
+            {' '}
+            CLUB
+          </span>
         </div>
       </div>
 

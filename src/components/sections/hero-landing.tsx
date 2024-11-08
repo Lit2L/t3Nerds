@@ -27,7 +27,7 @@ export default function HeroLanding() {
       <div className='h-32 w-48 sm:h-60 sm:w-72'>
         <Logo />
 
-        <div className='text-md mx-auto w-full text-center font-genos font-bold tracking-tight tracking-widest text-white'>
+        <div className='text-md mx-auto w-full text-center font-genos font-bold tracking-widest text-white'>
           TRAINING{' '}
           <span className='text-md font-bold tracking-widest text-red-500'>
             {' '}

@@ -1,3 +1,4 @@
+import { About } from '@/components/sections/about'
 import { Benefits } from '@/components/sections/benefits'
 import HeroLanding from '@/components/sections/hero-landing'
 import { Schedule } from '@/components/sections/schedule'
@@ -9,6 +10,7 @@ export default async function IndexPage() {
   return (
     <div className='mx-auto min-h-screen w-full'>
       <HeroLanding />
+      <About />
       <Training />
       <Benefits />
       <Schedule />

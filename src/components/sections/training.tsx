@@ -30,10 +30,11 @@ const TrainingCard = ({ card }: TrainingCardProps) => (
         <Image
           src={card.image}
           alt={card.title}
-          className='rounded-lg '
+          className='size-6 rounded-lg'
           // width={300}
           // height={300}
           fill
+          sizes='300px'
           loading='lazy'
         />
       </AspectRatio>
@@ -75,7 +76,7 @@ export const Training = () => {
       description:
         'Join a supportive community of martial artists. Enjoy daily group sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more, all designed to help you reach your peak performance.',
       info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
-      image: '/wesdaypose.jpeg',
+      image: '/wesmitts.png',
       icon: <GiYinYang className='size-6 text-black dark:text-white' />,
       href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
     },

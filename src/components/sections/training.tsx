@@ -4,13 +4,12 @@ import { GiHighPunch, GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
 import { PiParkDuotone } from 'react-icons/pi'
 
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Badge } from '@/components/ui/badge'
 
 interface TrainingCardProps {
   card: {
     id: number
     title: string
-    description: string
+    bulletPoints: string[]
     info: string
     image: string
     icon: JSX.Element
@@ -19,31 +18,36 @@ interface TrainingCardProps {
 }
 
 const TrainingCard = ({ card }: TrainingCardProps) => (
-  <article className='m-1 mx-auto h-[36rem] min-w-[200px] max-w-[300px] rounded-lg border-4 border-black bg-gray-100 p-3 shadow-lg transition-transform duration-200 hover:scale-105 dark:bg-gray-800'>
+  <article className='m-1 mx-auto h-[44rem] w-[24rem] rounded-lg bg-gray-100 p-1 shadow-lg transition-transform duration-200 hover:scale-100 dark:bg-gray-800'>
     <div className='flex w-full flex-col items-center justify-center gap-2 text-lg font-semibold'>
       <div className='rounded-full border-2 border-black/50 p-3'>
         {card.icon}
       </div>
       <h3>{card.title}</h3>
-
-      <AspectRatio ratio={1 / 1} className=''>
+    </div>
+    <div className=''>
+      <AspectRatio
+        ratio={1 / 1}
+        className='h-80 rounded-lg border-2 border-transparent/50'
+      >
         <Image
           src={card.image}
           alt={card.title}
-          className='size-6 rounded-lg'
+          className='rounded-lg object-cover shadow-md shadow-emerald-500'
           // width={300}
           // height={300}
           fill
-          sizes='300px'
+          // sizes='300px'
           loading='lazy'
         />
       </AspectRatio>
-
-      <div className='p-2 text-center md:text-left'>
-        <p className='text-sm text-gray-700 dark:text-gray-300'>
-          {card.description}
+    </div>
+    <div className='p-3 text-left '>
+      {card.bulletPoints.map((bullet, index) => (
+        <p key={index} className='font-heading text-sm font-light leading-9'>
+          - {bullet}
         </p>
-      </div>
+      ))}
     </div>
   </article>
 )
@@ -53,8 +57,11 @@ export const Training = () => {
     {
       id: 0,
       title: 'Private Coaching',
-      description:
-        'Learning technique through private lessons with an experienced coach is a great way accelerate your abilities. Private lessons are customized to fit your individual needs or goals for yourself. Tailor your training to accelerate your progression towards your goals.',
+      bulletPoints: [
+        'Customized training with an experienced coach',
+        'Accelerate abilities and master techniques',
+        'Progress faster and see real results in training.'
+      ],
       info: '30 Min OR 60 Min Sessions',
       image: '/private.jpg',
       icon: <GiWhistle className='size-6 text-gray-500' />,
@@ -63,8 +70,11 @@ export const Training = () => {
     {
       id: 1,
       title: 'Video Analysis',
-      description:
-        'Visually analyze your technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of body mechanics to help make rapid progress toward your goals.',
+      bulletPoints: [
+        'Experienced coach analyzes your technique',
+        'Teaches body mechanics and pinpoints areas for improvement',
+        'Reinforces proper technique and helps develop better habits.'
+      ],
       info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
       image: '/camera.jpg',
       icon: <CiVideoOn className='size-6 text-red-700' />,
@@ -73,8 +83,10 @@ export const Training = () => {
     {
       id: 2,
       title: 'Group Training',
-      description:
-        'Join a supportive community of martial artists. Enjoy daily group sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more, all designed to help you reach your peak performance.',
+      bulletPoints: [
+        'Supportive group of martial artists that train together',
+        'Peak performance training involves calisthenics, drills, strength conditioning, and optional group sparring'
+      ],
       info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
       image: '/wesmitts.png',
       icon: <GiYinYang className='size-6 text-black dark:text-white' />,
@@ -83,8 +95,12 @@ export const Training = () => {
     {
       id: 3,
       title: 'Kickboxing',
-      description:
-        'Kickboxing is an umbrella term for stand-up striking sports based on punching and kicking. Muay Thai is one of the most well-known kickboxing sports along with Kyokushin Karate and kickboxing fought under K-1 rules..',
+      bulletPoints: [
+        'Learn stand-up striking skills involving punches and kicking through Muay Thai.',
+        'Develop footwork, head movement, and combinations.',
+        'Experience training with focus mitts',
+        'Heavy bag work, and optional sparring'
+      ],
       info: '30 - ALL AGES. BEGINNERS.',
       image: '/groupClass.webp',
       icon: <GiTeacher className='size-6 text-sky-500' />,
@@ -93,8 +109,10 @@ export const Training = () => {
     {
       id: 4,
       title: 'Boxing',
-      description:
-        'The Sweet Science, The Art of Punching is one of the most battle tested martial arts in the world. Learn the fundamentals of boxing, footwork, head movement, and combinations.',
+      bulletPoints: [
+        'Learn boxing fundamentals like footwork, head movement and combinations.',
+        'Experience training  focus mitts, and heavy bag work.'
+      ],
       info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
       image: '/mitts.jpg',
       icon: <GiHighPunch className='size-6 text-red-500' />,
@@ -104,9 +122,12 @@ export const Training = () => {
     {
       id: 5,
       title: 'Outdoor Training',
-      description:
-        'Mix it up sometime and train like ancient warriors with our outdoor sessions. Connect with nature, enhance your fitness, and build mental toughness in a challenging and invigorating environment.',
+
       info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
+      bulletPoints: [
+        'Outdoor sessions teach resistance and mental toughness',
+        'Connect with nature and enhance your fitness in a challenging and new environment.'
+      ],
       image: '/burn.jpeg',
       icon: <PiParkDuotone className='size-6 text-green-500' />,
       href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'

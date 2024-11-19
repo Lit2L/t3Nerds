@@ -1,44 +1,59 @@
+import { MinimalCardDescription } from '../ui/minimal-card'
 import { FaBrave, FaHeartPulse } from 'react-icons/fa6'
 import { GiShieldBash, GiStrong } from 'react-icons/gi'
+import { MdOutlineSelfImprovement, MdSelfImprovement } from 'react-icons/md'
 import { RiMentalHealthLine } from 'react-icons/ri'
 import { TbUsersGroup } from 'react-icons/tb'
 
 export const Benefits = () => {
   const trainingBenefits = [
     {
-      title: 'Calorie Burner',
-      icon: <GiStrong />,
-      description: `It's all about burning those extra calories and Muay Thai does a great job at it. Each Muay Thai session lasts about 1-2 hours and consists of warm-up, shadow boxing, drilling techniques, heavy bag work, padwork, with some strength & conditioning exercises. One 2-hour session can burn 1500 calories, making it an effectives and fun way to lose weight.`
-    },
-    {
       title: 'Self-Defense',
       icon: <GiShieldBash />,
       description:
-        'Muay Thai consists of both attacking and defense techniques. As a combat art originating in military warfare, Muay Thai was designed to inflict pain to the enemy while protecting the user from physical harm. Its range of weapons like the elbow strike, knee strike and push kick can be used to disarm an attack. It is a great self-defense skill, making it ideal for everyone to learn especially kids and women.'
+        'Learn attack and defense techniques that inflict damage and protect yourself at the same time.'
     },
     {
-      title: 'Mental Toughness',
-      icon: <RiMentalHealthLine />,
-      description:
-        'Training Muay Thai helps to build mental fortitude by challenging limits both physically and mentally as it takes perseverance. So Muay Thai strengthens not only the body, but also the mind. When the going gets tough, the tough gets going. Being mentally tough enables a person to succeed in the face of uncertainty and adversity.'
-    },
-    {
-      title: 'Self-Confidence',
-      icon: <FaBrave />,
-      description:
-        'Training Muay Thai makes one leaner and gets one into a better shape. And when a person feels good about the way he/she looks, the more confidence they exude. At the same time if one makes the effort to train Muay Thai regularly, he/she will get better at it and seeing that improvement over time has a direct effect in the growth of self-confidence..'
-    },
-    {
-      title: 'Lowers Blood Pressure',
+      title: 'Health and Wellness',
       icon: <FaHeartPulse />,
-      description:
-        'Cardiovascular illness is the number 1 cause of death globally. One of the most common heart disease is hypertension, or high blood pressure, which can lead to serious complications like stroke and heart failure. The first step to reducing the risk of developing heart diseases is to make positive changes by engaging in regular cardiovascular exercises. As a cardio-intensive sport, regular training in Muay Thai can reduce blood pressure and strengthen the heart. Being healthy isn’t a fad or a trend, it is a lifestyle and Muay Thai can help to achieve it.'
+      description: [
+        'Burn up to 1500 calories per 1-2 hour session',
+        'Reduce blood pressure and increase heart strength'
+      ]
     },
+    {
+      title: 'Confidence & Mental Toughness',
+      icon: <FaBrave />,
+
+      description: [
+        'Persevere through rigorous training and power through fear',
+        'Strengthen both your mind and your body'
+      ]
+    },
+    {
+      title: 'Discpline & Focus',
+      icon: <RiMentalHealthLine />,
+      description: [
+        'Develop self-discipline and focus',
+        'Improve concentration, mental clarity and mental sharpness'
+      ]
+    },
+
     {
       title: 'Widens Social Circle',
       icon: <TbUsersGroup />,
-      description:
-        'There is always a strong sense of comradery at every Muay Thai gym. There is a common interest in learning Muay Thai; everyone is working towards the shared goal of self-betterment; blood and sweat are shed during training; and this is how the deepest friendships are forged. Friends who slay together, stay together.'
+      description: [
+        'Develop a strong sense of community',
+        'Make new friends and build lasting bonds'
+      ]
+    },
+    {
+      title: 'Peace of Mind & Mental Health',
+      icon: <MdOutlineSelfImprovement />,
+      description: [
+        'Relieve stress and improve mental clarity through physical activity',
+        'Build resilience and find inner calm while achieving personal growth'
+      ]
     }
   ]
   return (
@@ -50,20 +65,20 @@ export const Benefits = () => {
         <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
           Benefits of Muay Thai
         </h2>
-        <p className='sm:text-md max-w-[85%] leading-normal text-muted-foreground sm:leading-7'>
-          Muay Thai literally means “Thai Boxing”. The national sport of
+        {/* <p className='sm:text-md max-w-[85%] leading-normal text-muted-foreground sm:leading-7'>
+          Muay Thai literally means “Thai Boxing.” The national sport of
           Thailand, it is respected worldwide for its dynamic and powerful
-          techniques. Often referenced as the “Art of 8 Limbs”, it uses eight
+          techniques. Often referenced as the “Art of 8 Limbs,” it uses eight
           points of contact: punches, elbows, knees, and kicks. Whether
           you&apos;re looking to get fit, learn self-defense, or explore martial
           arts, Muay Thai offers something for everyone.
-        </p>
+        </p> */}
       </div>
       <div className='mx-auto grid justify-center gap-2 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3'>
         {trainingBenefits.map((benefit, index) => (
           <div
             key={index}
-            className='relative overflow-hidden rounded-lg border bg-background p-2'
+            className='relative overflow-hidden rounded-lg border bg-background p-2 drop-shadow-2xl'
           >
             <div className='flex flex-col justify-center gap-3 rounded-md px-3 py-2'>
               <div className='flex items-center gap-3 px-3'>
@@ -72,9 +87,19 @@ export const Benefits = () => {
                 </span>
                 <h3 className='font-bold'>{benefit.title}</h3>
               </div>
-              <p className='text-sm text-muted-foreground'>
-                {benefit.description}
-              </p>
+              <div className='text-sm text-muted-foreground'>
+                {Array.isArray(benefit.description) ? (
+                  benefit.description.map((desc, i) => (
+                    <MinimalCardDescription key={i}>
+                      •{desc}
+                    </MinimalCardDescription>
+                  ))
+                ) : (
+                  <MinimalCardDescription>
+                    {benefit.description}
+                  </MinimalCardDescription>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -82,3 +107,53 @@ export const Benefits = () => {
     </section>
   )
 }
+
+// -make CTA buttons bigger
+// -top scroll of page has too much space on the sides
+// - boxes have hover over but don’t really expand or lead to anything else
+// -make shortcuts bigger or more elongated
+// -adjust class schedule names to include other techniques
+// -add a social media shortcut
+// -adjust tiers for pricing to include by class and private instruction
+// -book a private (change to ‘private lessons’) and then make sure it links to the right page
+
+// Private Coaching
+// •	Customized training with an experienced coach
+// •	Accelerate abilities and master techniques
+// •	Progress faster and see real results in training
+
+// Video Analysis
+// •	Experienced coach analyzes your technique
+// •	Teaches body mechanics and pinpoints areas for improvement
+// •	Reinforces proper technique and helps develop better habits
+
+// Group Training
+// •	Supportive group of martial artists that train together
+// •	Peak performance training involves calisthenics, drills, strength conditioning, and group spar
+
+// Kickboxing
+// •	Learn stand-up striking involving punching and kicking through Muay Thai
+// •	Experience training with mitts, Thai pads, heavy bag, and sparring
+
+// Boxing
+// •	Learn the fundamentals of boxing technique like footwork, head movement, and combos
+// •	Experience training with shadow boxing, mitts, and heavy bags
+
+// Outdoor Training
+// •	Outdoor sessions teach resistance and mental toughness
+// •	Connect with nature and enhance your fitness in a challenging and new environment
+
+// Health and Wellness
+// •	Burn up to 1500 calories per 1-2 hour session
+// •	Reduce blood pressure and increase heart strength
+
+// Self-Defense
+// •	Learn attack and defense techniques that inflict damage and protect yourself at the same time
+
+// Confidence and Mental Toughness
+// •	Persevere through rigorous training and power through fear
+// •	Strengthen both your mind and your body
+
+// Social Community
+// •	Develop a strong sense of community
+// •	Make new friends and build lasting bonds

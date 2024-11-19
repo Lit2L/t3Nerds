@@ -1,5 +1,9 @@
-import Image from 'next/image'
+import { Card, CardTitle } from '../ui/card'
+import { Separator } from '../ui/separator'
+import { HeaderSection } from '@/components/shared/header-section'
+import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 import { Calendar } from 'lucide-react'
+import Image from 'next/image'
 import { CiDumbbell, CiLocationOn } from 'react-icons/ci'
 import { FaDumbbell } from 'react-icons/fa'
 import {
@@ -9,12 +13,6 @@ import {
   GiPunchingBag
 } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
-
-import { HeaderSection } from '@/components/shared/header-section'
-import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
-
-import { Card, CardTitle } from '../ui/card'
-import { Separator } from '../ui/separator'
 
 const classes = [
   {
@@ -53,10 +51,9 @@ const classes = [
   {
     id: 4,
     title: 'Thursday',
-    level: 'all levels',
-    description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    level: 'Beginners/Novice',
+    description: 'Boxing/Muay Thai',
+    attributes: 'Head Movement, Punches, Footwork, Defensive Techniques',
     schedule: [
       {
         id: 1,
@@ -79,7 +76,7 @@ const classes = [
 export function Schedule() {
   return (
     <section id='schedule' className='container'>
-      <div className='font-genos bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] py-32 dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
+      <div className='bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] py-32 font-genos dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
         <MaxWidthWrapper>
           <HeaderSection
             label='Nerds Fighting'
@@ -119,7 +116,7 @@ export function Schedule() {
                             {schedule.time}
                           </span>
 
-                          <p className='w-3/16 font-genos m-1 flex text-lg font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
+                          <p className='w-3/16 m-1 flex font-genos text-lg font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
                             {item.description}
                           </p>
                         </div>

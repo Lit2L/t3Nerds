@@ -26,10 +26,9 @@ const classes = [
   {
     id: 2,
     title: 'Monday',
-    description: 'Muay Thai',
+    description: 'Boxing',
     level: 'All levels',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    attributes: 'Boxing Techniques, Footwork, Defense, Heavy Bag, Focus Mitts.',
     schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
   },
 
@@ -52,8 +51,8 @@ const classes = [
     id: 4,
     title: 'Thursday',
     level: 'Beginners/Novice',
-    description: 'Boxing/Muay Thai',
-    attributes: 'Head Movement, Punches, Footwork, Defensive Techniques',
+    description: 'Boxing',
+    attributes: 'Boxing Techniques, Footwork, Defense, Heavy Bag, Focus Mitts.',
     schedule: [
       {
         id: 1,

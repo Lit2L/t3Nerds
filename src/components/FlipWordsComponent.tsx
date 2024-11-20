@@ -1,6 +1,5 @@
-import React from 'react'
-
 import { FlipWords } from '@/components/ui/flip-words'
+import React from 'react'
 
 export function FlipWordsComponent() {
   const words = [

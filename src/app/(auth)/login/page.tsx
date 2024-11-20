@@ -1,11 +1,10 @@
-import { type Metadata } from 'next'
-import Link from 'next/link'
-
-import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
 import Logo from '@/components/Logo'
 import { Icons } from '@/components/icons'
+import { buttonVariants } from '@/components/ui/button'
 import { UserAuthForm } from '@/components/user-auth-form'
+import { cn } from '@/lib/utils'
+import { type Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -28,9 +27,9 @@ export default function LoginPage() {
         </>
       </Link>
       <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
-        <div className='flex flex-col space-y-2 text-center'>
+        <div className='flex flex-col items-center justify-center space-y-2 text-center'>
           <Logo />
-          <h1 className='text-2xl font-semibold tracking-tight'>
+          <h1 className='text-center text-2xl font-semibold tracking-tight'>
             Welcome back
           </h1>
         </div>

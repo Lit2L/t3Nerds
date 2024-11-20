@@ -1,7 +1,5 @@
 'use client'
 
-import RetroGrid from '@/components/ui/retro-grid'
-
 import { AnimatedJoinButton } from '../AnimatedJoinButton'
 import { FlipWordsComponent } from '../FlipWordsComponent'
 import Logo from '../Logo'
@@ -14,10 +12,10 @@ export default function HeroLanding() {
   return (
     <section
       id='hero'
-      className='container relative mx-auto flex min-h-screen w-full flex-col items-center justify-evenly pb-36   text-center sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
+      className='container relative mx-auto flex min-h-screen w-full flex-col items-center justify-evenly pb-36 text-center sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
     >
-      <Badge className='-translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-genos  font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
-        Kickboxing & Martial Arts Training Club
+      <Badge className='text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center  font-genos font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
+        Fight Training & Martial Arts Club
       </Badge>
       <GradualSpacing
         className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'

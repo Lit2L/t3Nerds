@@ -18,7 +18,7 @@ export function AnimatedPinCard() {
           <p className='!m-0 max-w-xs !pb-2 font-heading text-base font-bold text-slate-100'>
             Nerds Fighting
           </p>
-          <span className=''>Location: Williams MMA</span>
+          <span className=''>Location: Williams Academy of MMA</span>
           <div className='!m-0 !p-0 text-base font-normal'>
             <span className='text-slate-500'>
               Address: 8780 Warner Ave, Suite 7 Fountain Valley, CA 92708
@@ -37,7 +37,7 @@ export function AnimatedPinCard() {
         <Card className='my-6 py-6'>
           <CardContent className='p-3'>
             <p className='text-center font-heading text-2xl'>
-              Location: Williams MMA
+              Location: Williams Academy of MMA
             </p>
             <Separator className='my-1' />
             8780 Warner Ave, Suite 7 Fountain Valley, CA 92708

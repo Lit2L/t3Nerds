@@ -1,8 +1,8 @@
 // TODO: Fix this when we turn strict mode on.
-import { type UserSubscriptionPlan } from '@/types'
 
 import { freePlan, proPlan } from '@/config/subscriptions'
 import { db } from '@/lib/db'
+import { type UserSubscriptionPlan } from '@/types'
 
 export async function getUserSubscriptionPlan(
   userId: string

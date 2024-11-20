@@ -1,4 +1,5 @@
 import { MinimalCardDescription } from '../ui/minimal-card'
+import { BsYinYang } from 'react-icons/bs'
 import { FaBrave, FaHeartPulse } from 'react-icons/fa6'
 import { GiShieldBash, GiStrong } from 'react-icons/gi'
 import { MdOutlineSelfImprovement, MdSelfImprovement } from 'react-icons/md'
@@ -12,6 +13,15 @@ export const Benefits = () => {
       icon: <GiShieldBash />,
       description:
         'Learn attack and defense techniques that inflict damage and protect yourself at the same time.'
+    },
+    {
+      title: 'Flow State',
+      icon: <BsYinYang />,
+      description: [
+        'Unlock a heightened sense of focus and performance during training',
+        'Engage in fluid movements that synchronize body and mind',
+        'Experience the joy of being fully immersed in the present moment'
+      ]
     },
     {
       title: 'Health and Wellness',
@@ -30,14 +40,14 @@ export const Benefits = () => {
         'Strengthen both your mind and your body'
       ]
     },
-    {
-      title: 'Discpline & Focus',
-      icon: <RiMentalHealthLine />,
-      description: [
-        'Develop self-discipline and focus',
-        'Improve concentration, mental clarity and mental sharpness'
-      ]
-    },
+    // {
+    //   title: 'Discpline & Focus',
+    //   icon: <RiMentalHealthLine />,
+    //   description: [
+    //     'Develop self-discipline and focus',
+    //     'Improve concentration, mental clarity and mental sharpness'
+    //   ]
+    // },
 
     {
       title: 'Widens Social Circle',
@@ -62,9 +72,9 @@ export const Benefits = () => {
       className='container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24'
     >
       <div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
-        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
+        {/* <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
           Benefits of Muay Thai
-        </h2>
+        </h2> */}
         {/* <p className='sm:text-md max-w-[85%] leading-normal text-muted-foreground sm:leading-7'>
           Muay Thai literally means “Thai Boxing.” The national sport of
           Thailand, it is respected worldwide for its dynamic and powerful

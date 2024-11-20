@@ -1,10 +1,9 @@
-import { notFound, redirect } from 'next/navigation'
+import { Editor } from '@/components/editor'
+import { getCurrentUser } from '@/lib/session'
 import { authOptions } from '@/server/auth'
 import { api } from '@/trpc/server'
 import { type Post, type User } from '@prisma/client'
-
-import { getCurrentUser } from '@/lib/session'
-import { Editor } from '@/components/editor'
+import { notFound, redirect } from 'next/navigation'
 
 async function getPostForUser(postId: Post['id']) {
   return await api.post.get.query({

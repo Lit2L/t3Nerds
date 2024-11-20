@@ -30,7 +30,7 @@ export default function LoginPage() {
         <div className='flex flex-col items-center justify-center space-y-2 text-center'>
           <Logo />
           <h1 className='text-center text-2xl font-semibold tracking-tight'>
-            Welcome back
+            Welcome back!
           </h1>
         </div>
         <UserAuthForm />

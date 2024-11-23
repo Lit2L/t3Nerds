@@ -1,18 +1,16 @@
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
-
 import '@/styles/globals.css'
-import type { Metadata, Viewport } from 'next'
-import { cookies } from 'next/headers'
 import { genosFont, logoFont } from '@/assets'
-import { TRPCReactProvider } from '@/trpc/react'
-
-import { siteConfig } from '@/config/site'
-import { absoluteUrl, cn } from '@/lib/utils'
-import { Toaster } from '@/components/ui/toaster'
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from '@/components/ui/toaster'
+import { siteConfig } from '@/config/site'
+import { absoluteUrl, cn } from '@/lib/utils'
+import { TRPCReactProvider } from '@/trpc/react'
+import type { Metadata, Viewport } from 'next'
+import { cookies } from 'next/headers'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -94,7 +92,7 @@ export default function RootLayout({
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
             {children}
             <Analytics />
             <Toaster />

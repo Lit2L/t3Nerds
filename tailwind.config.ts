@@ -77,6 +77,7 @@ const config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       animation: {
+        move: 'move 5s linear infinite',
         'text-gradient': 'text-gradient 5.3s linear infinite',
         ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -84,6 +85,10 @@ const config = {
         grid: 'grid 25s linear infinite'
       },
       keyframes: {
+        move: {
+          '0%': { transform: 'translateX(-200px)' },
+          '100%': { transform: 'translateX(200px)' }
+        },
         'accordion-down': {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' }

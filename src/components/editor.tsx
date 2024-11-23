@@ -1,23 +1,21 @@
 'use client'
 
-import * as React from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import type EditorJS from '@editorjs/editorjs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { type Post } from '@prisma/client'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
 import { useForm } from 'react-hook-form'
 import TextareaAutosize from 'react-textarea-autosize'
 import type * as z from 'zod'
-
 import '@/styles/editor.css'
-import { api } from '@/trpc/react'
-
-import { cn } from '@/lib/utils'
-import { postPatchSchema } from '@/lib/validations/post'
+import { Icons } from '@/components/icons'
 import { buttonVariants } from '@/components/ui/button'
 import { toast } from '@/components/ui/use-toast'
-import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
+import { postPatchSchema } from '@/lib/validations/post'
+import { api } from '@/trpc/react'
 
 interface EditorProps {
   post: Pick<Post, 'id' | 'title' | 'content' | 'published'>
@@ -152,7 +150,7 @@ export function Editor({ post }: EditorProps) {
               className={cn(buttonVariants({ variant: 'ghost' }))}
             >
               <>
-                <Icons.chevronLeft className='mr-2 h-4 w-4' />
+                <Icons.chevronLeft className='mr-2 size-4' />
                 Back
               </>
             </Link>
@@ -161,9 +159,7 @@ export function Editor({ post }: EditorProps) {
             </p>
           </div>
           <button type='submit' className={cn(buttonVariants())}>
-            {isSaving && (
-              <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
-            )}
+            {isSaving && <Icons.spinner className='mr-2 size-4 animate-spin' />}
             <span>Save</span>
           </button>
         </div>

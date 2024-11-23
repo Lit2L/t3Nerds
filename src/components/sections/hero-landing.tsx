@@ -14,7 +14,7 @@ export default function HeroLanding() {
       id='hero'
       className='container relative mx-auto flex min-h-screen w-full flex-col items-center justify-evenly pb-36 text-center sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
     >
-      <Badge className='text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center  font-genos font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
+      <Badge className='md:text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-genos text-xs  font-bold uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:text-sm sm:tracking-wide lg:text-lg'>
         Fight Training & Martial Arts Club
       </Badge>
       <GradualSpacing

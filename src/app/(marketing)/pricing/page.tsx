@@ -1,8 +1,7 @@
-import Link from 'next/link'
-
-import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Pricing'
@@ -26,23 +25,23 @@ export default function PricingPage() {
           </h3>
           <ul className='grid gap-3 text-sm text-muted-foreground sm:grid-cols-2'>
             <li className='flex items-center'>
-              <Icons.check className='mr-2 h-4 w-4' /> Access to all available
+              <Icons.check className='mr-2 size-4' /> Access to all available
               classes.
             </li>
             <li className='flex items-center'>
-              <Icons.check className='mr-2 h-4 w-4' /> Learn Kickboxing, Muay
+              <Icons.check className='mr-2 size-4' /> Learn Kickboxing, Muay
               Thai, Boxing and more.
             </li>
 
             <li className='flex items-center'>
-              <Icons.check className='mr-2 h-4 w-4' /> Burn up to 1500 calories
+              <Icons.check className='mr-2 size-4' /> Burn up to 1500 calories
               per 1-2 hour session.
             </li>
             <li className='flex items-center'>
-              <Icons.check className='mr-2 h-4 w-4' /> Hands-on training
+              <Icons.check className='mr-2 size-4' /> Hands-on training
             </li>
             <li className='flex items-center'>
-              <Icons.check className='mr-2 h-4 w-4' /> Strength and conditioning
+              <Icons.check className='mr-2 size-4' /> Strength and conditioning
             </li>
           </ul>
         </div>

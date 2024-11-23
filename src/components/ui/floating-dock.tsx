@@ -1,18 +1,16 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import Link from 'next/link'
-import { IconLayoutNavbarCollapse } from '@tabler/icons-react'
+import { cn } from '@/lib/utils'
 import {
   AnimatePresence,
-  MotionValue,
   motion,
   useMotionValue,
   useSpring,
-  useTransform
+  useTransform,
+  type MotionValue
 } from 'framer-motion'
-
-import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { useRef, useState } from 'react'
 
 export const FloatingDock = ({
   items,
@@ -66,7 +64,7 @@ export const FloatingDock = ({
 //                   key={item.title}
 //                   className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900'
 //                 >
-//                   <div className='h-4 w-4'>{item.icon}</div>
+//                   <div className='size-4'>{item.icon}</div>
 //                 </Link>
 //               </motion.div>
 //             ))}

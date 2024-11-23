@@ -1,11 +1,10 @@
 'use client'
 
+import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
+import { type SidebarNavItem } from '@/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { type SidebarNavItem } from '@/types'
-
-import { cn } from '@/lib/utils'
-import { Icons } from '@/components/icons'
 
 interface DashboardNavProps {
   items: SidebarNavItem[]
@@ -32,7 +31,7 @@ export function DashboardNav({ items }: DashboardNavProps) {
                   item.disabled && 'cursor-not-allowed opacity-80'
                 )}
               >
-                <Icon className='mr-2 h-4 w-4' />
+                <Icon className='mr-2 size-4' />
                 <span>{item.title}</span>
               </span>
             </Link>

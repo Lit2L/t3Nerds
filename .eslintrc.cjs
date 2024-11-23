@@ -27,6 +27,7 @@ const config = {
     '@next/next/no-html-link-for-pages': 'off',
     'tailwindcss/no-custom-classname': 'off',
     'tailwindcss/classnames-order': 'off',
+    '@typescript-eslint/no-contradicting-classes': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/prefer-optional-chain': 'off',

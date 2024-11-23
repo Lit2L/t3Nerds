@@ -1,19 +1,16 @@
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { allGuides } from 'contentlayer/generated'
-
-import { getTableOfContents } from '@/lib/toc'
 import { Icons } from '@/components/icons'
 import { Mdx } from '@/components/mdx-components'
 import { DocsPageHeader } from '@/components/page-header'
 import { DashboardTableOfContents } from '@/components/toc'
-
+import { getTableOfContents } from '@/lib/toc'
+import { allGuides } from 'contentlayer/generated'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import '@/styles/mdx.css'
-import { type Metadata } from 'next'
-
+import { buttonVariants } from '@/components/ui/button'
 //import { env } from '@/process.env.js'
 import { absoluteUrl, cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
+import { type Metadata } from 'next'
 
 interface GuidePageProps {
   params: {
@@ -102,7 +99,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             href='/guides'
             className={cn(buttonVariants({ variant: 'ghost' }))}
           >
-            <Icons.chevronLeft className='mr-2 h-4 w-4' />
+            <Icons.chevronLeft className='mr-2 size-4' />
             See all guides
           </Link>
         </div>

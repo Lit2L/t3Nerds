@@ -22,7 +22,7 @@ export default function LoginPage() {
         )}
       >
         <>
-          <Icons.chevronLeft className='mr-2 h-4 w-4' />
+          <Icons.chevronLeft className='mr-2 size-4' />
           Back
         </>
       </Link>
@@ -30,7 +30,7 @@ export default function LoginPage() {
         <div className='flex flex-col items-center justify-center space-y-2 text-center'>
           <Logo />
           <h1 className='text-center text-2xl font-semibold tracking-tight'>
-            Welcome back!
+            Welcome Back!
           </h1>
         </div>
         <UserAuthForm />

@@ -1,13 +1,12 @@
 'use client'
 
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
-import { api } from '@/trpc/react'
-
-import { cn } from '@/lib/utils'
+import { Icons } from '@/components/icons'
 import { buttonVariants, type ButtonProps } from '@/components/ui/button'
 import { toast } from '@/components/ui/use-toast'
-import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
+import { api } from '@/trpc/react'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
 
 type PostCreateButtonProps = ButtonProps
 
@@ -64,9 +63,9 @@ export function PostCreateButton({
       {...props}
     >
       {isLoading ? (
-        <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
+        <Icons.spinner className='mr-2 size-4 animate-spin' />
       ) : (
-        <Icons.add className='mr-2 h-4 w-4' />
+        <Icons.add className='mr-2 size-4' />
       )}
       New post
     </button>

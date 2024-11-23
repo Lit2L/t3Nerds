@@ -10,7 +10,13 @@ import { withContentlayer } from 'next-contentlayer'
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ['avatars.githubusercontent.com', 'assets.aceternity.com']
+    domains: [
+      'avatars.githubusercontent.com',
+      'assets.aceternity.com',
+      'images.unsplash.com',
+      'www.yelp.com',
+      's3-media0.fl.yelpcdn.com'
+    ]
   },
   experimental: {
     serverComponentsExternalPackages: ['@prisma/client']

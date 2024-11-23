@@ -1,14 +1,12 @@
 'use client'
 
-import * as React from 'react'
-import Link from 'next/link'
-import { useSelectedLayoutSegment } from 'next/navigation'
-import { type MainNavItem } from '@/types'
-
-import { cn } from '@/lib/utils'
-
 import Logo from './Logo'
 import { ModeToggle } from './ui/mode-toggle'
+import { cn } from '@/lib/utils'
+import { type MainNavItem } from '@/types'
+import Link from 'next/link'
+import { useSelectedLayoutSegment } from 'next/navigation'
+import * as React from 'react'
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -30,7 +28,7 @@ export function MainNav({ items, children }: MainNavProps) {
               key={index}
               href={item.disabled ? '#' : item.href}
               className={cn(
-                'flex items-center font-genos text-lg font-bold transition-colors hover:text-white/50',
+                'text-md flex items-center font-genos font-bold tracking-tighter transition-colors hover:text-white/50',
                 item.href.startsWith(`/${segment}`)
                   ? 'text-foreground'
                   : 'text-foreground/60',

@@ -1,13 +1,12 @@
-import { redirect } from 'next/navigation'
-import { authOptions } from '@/server/auth'
-import { api } from '@/trpc/server'
-
-import { getCurrentUser } from '@/lib/session'
 import { EmptyPlaceholder } from '@/components/empty-placeholder'
 import { DashboardHeader } from '@/components/header'
 import { PostCreateButton } from '@/components/post-create-button'
 import { PostItem } from '@/components/post-item'
 import { DashboardShell } from '@/components/shell'
+import { getCurrentUser } from '@/lib/session'
+import { authOptions } from '@/server/auth'
+import { api } from '@/trpc/server'
+import { redirect } from 'next/navigation'
 
 export const metadata = {
   title: 'Dashboard'

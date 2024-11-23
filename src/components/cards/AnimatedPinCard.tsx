@@ -14,7 +14,7 @@ export function AnimatedPinCard() {
         href='https://maps.app.goo.gl/zvZ1hC5it3SM1qad7'
         className='rounded-lg border bg-black p-3'
       >
-        <div className='flex h-[20rem] w-[28rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2'>
+        <div className='flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2'>
           <p className='!m-0 max-w-xs !pb-2 font-heading text-base font-bold text-slate-100'>
             Nerds Fighting
           </p>

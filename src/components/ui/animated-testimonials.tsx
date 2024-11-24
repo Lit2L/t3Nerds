@@ -1,5 +1,6 @@
 'use client'
 
+import { ScrollArea } from './scroll-area'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
@@ -47,7 +48,7 @@ export const AnimatedTestimonials = ({
     <div className='mx-auto w-full max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12'>
       <div className='relative grid grid-cols-1 gap-20 md:grid-cols-2'>
         <div>
-          <div className='relative size-64'>
+          <ScrollArea className='relative size-64 border-4'>
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -91,7 +92,7 @@ export const AnimatedTestimonials = ({
                 </motion.div>
               ))}
             </AnimatePresence>
-          </div>
+          </ScrollArea>
         </div>
         <div className='flex flex-col justify-between py-4'>
           <motion.div

@@ -34,7 +34,7 @@ export function AnimatedTestimonialsCards() {
         "We love it here. It's a relaxed atmosphere with a great vibe and a coach that really cares about his students. Highly Recommended!.",
       name: 'Andrea N',
       designation: 'Business Analyst',
-      src: '/nerds_9-19-24_.png'
+      src: '/nerdsGroup_9-19-24.png'
     }
   ]
   return <AnimatedTestimonials testimonials={testimonials} />

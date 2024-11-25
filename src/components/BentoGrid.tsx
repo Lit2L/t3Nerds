@@ -155,15 +155,16 @@ export const SkeletonTwo = () => {
     '/nerds_nov_w3.png',
     '/group-wes.jpeg',
     '/8.png',
-    '/sparring1.png'
+    '/thaikick.png'
   ]
 
   const images2 = [
-    '/wesmitts.png',
-    '/privateMobile.png',
+    '/11.16.24.nerds.png',
+    '/private.jpg',
     '/nerds3.png',
     '/gauntlet_group.png',
-    '/nerdsGroup_9-19-24.png'
+    '/nerdsGroup_9-19-24.png',
+    '/groupClass.webp'
   ]
 
   const imageVariants = {

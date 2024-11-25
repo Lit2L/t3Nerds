@@ -15,7 +15,7 @@ export const marketingConfig: MarketingConfig = {
       href: '/#schedule'
     },
     {
-      title: 'Book a Private',
+      title: 'Private Lessons',
       href: 'https://calendly.com/nerdsfighting/private-coaching'
     }
     // {

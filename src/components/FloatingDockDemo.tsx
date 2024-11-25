@@ -56,7 +56,7 @@ export function FloatingDockDemo() {
     {
       title: 'Dark Mode',
       icon: <ModeToggle />,
-      href: '#'
+      href: '/'
     }
   ]
   return (

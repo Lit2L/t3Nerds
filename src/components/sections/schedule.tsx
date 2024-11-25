@@ -88,7 +88,7 @@ export function Schedule() {
               classes.map((item) => (
                 <Card
                   key={item.id}
-                  className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-neutral-500/70 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-neutral-800/70'
+                  className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-neutral-500/70 dark:bg-zinc-800 dark:shadow-neutral-800/70'
                 >
                   <CardTitle className='p-1'>
                     <div className='flex items-center justify-between gap-3'>

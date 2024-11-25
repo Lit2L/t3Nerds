@@ -1,6 +1,6 @@
-import { AnimatedTestimonialsCards } from '@/components/AnimatedTestimonialCards'
 import { FeaturesSectionDemo } from '@/components/BentoGrid'
 import { AnimatedPinCard } from '@/components/cards/AnimatedPinCard'
+import { AnimatedTestimonialsCards } from '@/components/cards/AnimatedTestimonialCards'
 import { TrainingCards } from '@/components/sections/TrainingCards'
 import { Benefits } from '@/components/sections/benefits'
 import HeroLanding from '@/components/sections/hero-landing'
@@ -12,9 +12,9 @@ export default async function IndexPage() {
       <HeroLanding />
       <TrainingCards />
       <AnimatedTestimonialsCards />
+      <FeaturesSectionDemo />
       <Benefits />
       <Schedule />
-      {/* <FeaturesSectionDemo /> */}
       <AnimatedPinCard />
     </div>
   )

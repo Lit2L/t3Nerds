@@ -1,4 +1,4 @@
-import { AnimatedTestimonialsCards } from '../AnimatedTestimonialCards'
+import { AnimatedTestimonialsCards } from '../cards/AnimatedTestimonialCards'
 import {
   MinimalCard,
   MinimalCardDescription,

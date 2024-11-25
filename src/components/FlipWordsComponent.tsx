@@ -3,18 +3,20 @@ import React from 'react'
 
 export function FlipWordsComponent() {
   const words = [
-    'No-Meatheads',
+    'Safe and Fun Workouts',
     'No-Egos',
-    'Technique',
-    'Strength',
-    'Conditioning',
-    'Defensive Skills',
-    'Fight-IQ',
-    'Confidence'
+    'Learn Technique',
+    'Learn Defensive Skills',
+    'Get Stronger',
+    'Get Faster',
+    'Learn Strategy and Fight Tactics',
+    'No-Meatheads',
+    'Improve Fight-IQ',
+    'Raise your Confidence'
   ]
 
   return (
-    <div className='flex w-full justify-center'>
+    <div className='flex w-full items-center justify-center'>
       <p className='text-md text-center font-genos font-semibold text-emerald-600 dark:text-emerald-400'>
         +++
       </p>

@@ -34,7 +34,7 @@ export default async function MarketingLayout({
       <main className='mx-auto w-full flex-1 items-center justify-center bg-[radial-gradient(circle_500px_at_50%_480px,#181818,transparent)] md:bg-[radial-gradient(circle_600px_at_50%_550px,#181818,transparent)]'>
         {children}
       </main>
-      <div className='fixed bottom-0 left-0 right-1/2  translate-x-1/2'>
+      <div className='fixed bottom-0 left-0 right-1/2 z-50 translate-x-1/2'>
         <FloatingDockDemo />
       </div>
       <SiteFooter />

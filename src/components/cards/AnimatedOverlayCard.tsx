@@ -27,7 +27,7 @@ export function AnimatedOverlayCard() {
         </video>
         <div className='text relative z-50'>
           <h1 className='relative text-lg font-bold text-gray-50 md:text-xl'>
-            Understand the What and the Why
+            Uppercut Practice
           </h1>
           {/* <p className='relative my-4 text-base font-normal text-gray-50'>
             This card is for some special elements, like displaying background

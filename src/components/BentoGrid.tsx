@@ -13,7 +13,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'Fight Training for Nerds',
       description:
-        'Our training incorporates a wide range of training techniques.',
+        'Our program incorporates a diverse range of training techniques.',
       skeleton: <SkeletonOne />,
       className:
         'col-span-1 md:col-span-2 lg:col-span-3 border-b lg:border-r dark:border-neutral-800'
@@ -26,14 +26,15 @@ export function FeaturesSectionDemo() {
         'border-b col-span-1 md:col-span-2 lg:col-span-3 dark:border-neutral-800'
     },
     {
-      title: 'How to Wrap your hands',
-      description: `Wrapping hands is an art form on it's own. From my coach to me and now to you, I show you how we wrap your hands that protect your knuckles and wrists without inhibiting your ability to close your fist.`,
+      title: 'How to Wrap hands for Training',
+      // description: `Maybe it's like smearing war paint across your face or meditation before battle but what used to feel like a complicated process is now a pre-training ritual . `,
+      description: `A pre-training ritual that not only secures your knuckles and wrists but also ensures the proper bone alignment in your hands, a critical component for delivering strikes effectively and safely.  When fatigue sets in, technique naturally degrades, and that’s when a hand or wrist injury can happen. A wrapped hand acts as a safeguard, maintaining stability and structure even when you get tired.`,
       skeleton: <SkeletonThree />,
       className: 'col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800'
     },
     {
-      title: 'Detailed Instruction',
-      description: 'Not just the HOW... but the WHY?.',
+      title: 'Nerd out on details',
+      description: 'FightIQ, Technique, and Strategy.',
       skeleton: <SkeletonFour />,
       className: 'col-span-1 lg:col-span-3 border-b lg:border-none'
     }
@@ -41,14 +42,12 @@ export function FeaturesSectionDemo() {
   return (
     <div className='relative z-20 mx-auto max-w-7xl px-3 py-10 lg:py-40'>
       <div className='px-8'>
-        <h4 className='mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-black dark:text-white lg:text-5xl lg:leading-tight'>
-          Come For The Workout
+        <h4 className='mx-auto max-w-5xl text-center font-genos text-3xl font-bold tracking-tight text-black dark:text-white lg:text-5xl lg:leading-tight'>
+          Life is better when you know how to fight
         </h4>
-        <p className='mx-auto my-1 max-w-2xl text-center text-sm font-normal text-neutral-500 dark:text-neutral-300 lg:text-base'>
-          Enjoy the Experience
-        </p>
-        <p className='mx-auto my-1 max-w-2xl text-center text-sm font-normal text-neutral-500 dark:text-neutral-300 lg:text-base'>
-          Stick Around For Growth
+
+        <p className='mx-auto my-1 max-w-2xl text-center font-genos text-sm font-bold text-neutral-500 dark:text-neutral-300 lg:text-base'>
+          Nerd Out at Nerds Fighting
         </p>
       </div>
 
@@ -93,7 +92,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        'mx-auto my-2 max-w-sm text-sm md:max-w-4xl md:text-left md:text-base',
+        'mx-auto my-2 max-w-sm text-xs md:max-w-4xl md:text-left md:text-base',
         'text-center font-normal text-neutral-500 dark:text-neutral-300  '
       )}
     >

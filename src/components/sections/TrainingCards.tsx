@@ -54,6 +54,9 @@ export function TrainingCards() {
   ]
   return (
     <div className='mx-auto w-full max-w-4xl'>
+      <p className='mx-auto max-w-7xl py-6 text-center font-genos text-3xl font-bold tracking-tight text-black dark:text-white lg:text-3xl lg:leading-tight'>
+        Life is better when you know how to fight
+      </p>
       <div className='flex min-h-[600px]  flex-col justify-center space-y-4  rounded-lg p-4'>
         <div className='relative grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2'>
           {cards.map((card, index) => (

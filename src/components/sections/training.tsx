@@ -1,9 +1,8 @@
+import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image from 'next/image'
 import { CiVideoOn } from 'react-icons/ci'
 import { GiHighPunch, GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
 import { PiParkDuotone } from 'react-icons/pi'
-
-import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 interface TrainingCardProps {
   card: {

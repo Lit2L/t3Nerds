@@ -28,7 +28,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'How to Wrap hands for Training',
       // description: `Maybe it's like smearing war paint across your face or meditation before battle but what used to feel like a complicated process is now a pre-training ritual . `,
-      description: `A pre-training ritual that not only secures your knuckles and wrists but also ensures the proper bone alignment in your hands, a critical component for delivering strikes effectively and safely.  When fatigue sets in, technique naturally degrades, and that’s when a hand or wrist injury can happen. A wrapped hand acts as a safeguard, maintaining stability and structure even when you get tired.`,
+      description: `When you get tired your technique will start to degrade and the alignment of your fists and wrists will start to weaken. We wrap our hands to help prevent injuries when we get fatigued.`,
       skeleton: <SkeletonThree />,
       className: 'col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800'
     },

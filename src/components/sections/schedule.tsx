@@ -3,15 +3,7 @@ import { Separator } from '../ui/separator'
 import { HeaderSection } from '@/components/shared/header-section'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 import { Calendar } from 'lucide-react'
-import Image from 'next/image'
-import { CiDumbbell, CiLocationOn } from 'react-icons/ci'
-import { FaDumbbell } from 'react-icons/fa'
-import {
-  GiBoxingGlove,
-  GiBoxingRing,
-  GiJumpingRope,
-  GiPunchingBag
-} from 'react-icons/gi'
+import { GiPunchingBag } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
 
 const classes = [
@@ -19,26 +11,24 @@ const classes = [
     id: 1,
     title: 'Sunday',
     description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    attributes: 'Muay Thai, Heavy Bag, Mitts & Thai Pads.',
     schedule: [{ id: 1, day: 'Sun', time: '6:00 AM' }]
   },
-  {
-    id: 2,
-    title: 'Monday',
-    description: 'Boxing',
-    level: 'All levels',
-    attributes: 'Boxing Techniques, Footwork, Defense, Heavy Bag, Focus Mitts.',
-    schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
-  },
+  // {
+  //   id: 2,
+  //   title: 'Monday',
+  //   description: 'Boxing',
+  //   level: 'All levels',
+  //   attributes: 'Boxing Techniques, Footwork, Defense, Heavy Bag, Focus Mitts.',
+  //   schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
+  // },
 
   {
     id: 3,
     title: 'Wednesday',
     level: 'All levels',
-    description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    description: 'Cardio Kickboxing',
+    attributes: 'Conditioning, Heavy Bag & Thai Pads.',
     schedule: [
       {
         id: 1,
@@ -50,9 +40,8 @@ const classes = [
   {
     id: 4,
     title: 'Thursday',
-    level: 'Beginners/Novice',
-    description: 'Boxing',
-    attributes: 'Boxing Techniques, Footwork, Defense, Heavy Bag, Focus Mitts.',
+    description: 'Cardio Kickboxing',
+    attributes: 'Conditioning, Heavy Bag, Focus Mitts.',
     schedule: [
       {
         id: 1,
@@ -66,9 +55,11 @@ const classes = [
     title: 'Saturday',
     level: 'All levels',
     description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
-    schedule: [{ id: 1, day: 'Sat', time: '8:00 AM' }]
+    attributes: 'Muay Thai, Heavy Bag, Mitts & Thai Pads.',
+    schedule: [
+      { id: 1, day: 'Sat', time: '8:00 AM' },
+      { id: 2, day: 'Sat', time: '7:00 AM' }
+    ]
   }
 ]
 
@@ -115,7 +106,7 @@ export function Schedule() {
                             {schedule.time}
                           </span>
 
-                          <p className='w-3/16 m-1 flex font-genos text-lg font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
+                          <p className='w-3/16 text-md m-1 flex font-genos font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
                             {item.description}
                           </p>
                         </div>
